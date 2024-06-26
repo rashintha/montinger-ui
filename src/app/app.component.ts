@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'montinger-ui';
+  private translate = inject(TranslateService)
+
+  title = 'Montinger';
+
+  constructor() {
+    this.translate.setDefaultLang('en')
+    this.translate.use('en')
+  }
 }
