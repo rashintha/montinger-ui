@@ -5,8 +5,8 @@ import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideToastr } from 'ngx-toastr';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
-import { HttpLoaderFactory } from './core';
+import { HttpClient, provideHttpClient, withInterceptors } from '@angular/common/http';
+import { HttpLoaderFactory, tokenInterceptor } from './core';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideAnimations(),
     provideToastr(),
-    provideHttpClient(),
+    provideHttpClient(withInterceptors([tokenInterceptor])),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {
