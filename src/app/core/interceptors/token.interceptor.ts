@@ -4,7 +4,7 @@ import { inject } from '@angular/core'
 import { TokenService } from '../services'
 
 export const tokenInterceptor: HttpInterceptorFn = (req, next) => {
-  let tokenService = inject(TokenService)
+  const tokenService = inject(TokenService)
 
   const isApiUrl = req.url.startsWith(ApiConfig.apiBaseURL)
   const isLoginUrl = req.url.includes(`${ApiConfig.apiBaseURL}/auth/login`)

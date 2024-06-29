@@ -1,5 +1,5 @@
-import { Injectable, signal } from '@angular/core';
-import { TokenSave } from '../interfaces';
+import { Injectable, signal } from '@angular/core'
+import { TokenSave } from '../interfaces'
 
 const ACCESS_TOKEN_STORAGE_KEY = 'invalid_access_token'
 const REFRESH_TOKEN_STORAGE_KEY = 'invalid_refresh_token'

@@ -1,10 +1,10 @@
-import { Injectable, inject, signal } from '@angular/core';
-import { APIRequest } from '../classes';
-import { HttpClient } from '@angular/common/http';
-import { APIRequestResources } from '../enums';
-import { ApiConfig } from '../config';
-import { map } from 'rxjs';
-import { Router } from '@angular/router';
+import { Injectable, inject, signal } from '@angular/core'
+import { APIRequest } from '../classes'
+import { HttpClient } from '@angular/common/http'
+import { APIRequestResources } from '../enums'
+import { ApiConfig } from '../config'
+import { map } from 'rxjs'
+import { Router } from '@angular/router'
 
 @Injectable({
   providedIn: 'root'

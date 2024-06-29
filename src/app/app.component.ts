@@ -1,6 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, inject } from '@angular/core'
+import { RouterOutlet } from '@angular/router'
+import { TranslateService } from '@ngx-translate/core'
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   private translate = inject(TranslateService)
 
-  title = 'Montinger';
+  title = 'Montinger'
 
   constructor() {
     this.translate.setDefaultLang('en')
